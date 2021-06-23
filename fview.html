@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List view</title>
+</head>
+<body>
+
+<h3>Factory Information</h3>
+<table border=5>
+    <thead>
+        <td>Factory_Name</td>
+        <td>Factory_ID</td>
+        <td>Mobile_Number</td>
+        <td>Land_line</td>
+        <td>Email</td>
+        <td>Factory_GST</td>
+        <td>Factory_Address</td>
+    </thead>
+
+
+    {% for row in rows %}
+
+        <tr>
+            <td>{{row["Factory_Name"]}}</td>
+            <td>{{row["Factory_ID"]}}</td>
+            <td>{{row["Mobile_Number"]}}</td>
+            <td>{{row["Land_line"]}}</td>
+            <td>{{row["Email"]}}</td>
+            <td>{{row["Factory_GST"]}}</td>
+            <td>{{row["Factory_Address"]}}</td>
+        </tr>
+
+    {% endfor %}
+</table>
+<br><br>
+
+<a href="/">Go back to home page</a>
+
+</body>
+</html>
